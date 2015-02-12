@@ -227,6 +227,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     libqsap_sdk \
     libQWiFiSoftApCfg \
+    libwcnss_qmi \
     wpa_supplicant \
     wpa_supplicant.conf \
     wcnss_service
