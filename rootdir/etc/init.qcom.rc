@@ -599,3 +599,8 @@ service wcnss-service /system/bin/wcnss_service
     user system
     group system wifi radio
     oneshot
+
+service per_mgr /system/bin/pm-service
+    class core
+    user system
+    group system net_raw
