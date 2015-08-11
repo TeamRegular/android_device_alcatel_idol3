@@ -163,6 +163,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libdashplayer \
+    libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -170,6 +171,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libqcmediaplayer \
     libstagefrighthw \
     qcmediaplayer
 
