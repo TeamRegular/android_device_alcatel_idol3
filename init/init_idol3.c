@@ -32,6 +32,22 @@
 #include "log.h"
 #include "util.h"
 
+void common_properties()
+{
+        property_set("ro.product.device", "idol3");
+        property_set("ro.build.product", "idol3");
+}
+
+void dualsim_properties(char multisim_config[])
+{
+    property_set("persist.radio.multisim.config", multisim_config);
+}
+
+void gsm_properties(char default_network[])
+{
+    property_set("ro.telephony.default_network", default_network);
+}
+
 void vendor_load_properties()
 {
     char platform[PROP_VALUE_MAX];
@@ -45,31 +61,54 @@ void vendor_load_properties()
 
     property_get("ro.bootloader", bootloader);
 
-    if (strstr(bootloader, "L7SQR0R0BG00") || strstr(bootloader, "L7SRA0A0BG00") {
+    if (strstr(bootloader, "L7SQR0R0BG00") || strstr(bootloader, "L7SRA0A0BG00")) {
         /* 6045I (North America) */
+        common_properties();
+        dualsim_properties("single");
+        gsm_properties("9");
         property_set("ro.build.fingerprint", "TCL/6045I/idol3:5.0.2/LRX22G/v7SRA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SRA-0 release-keys");
         property_set("ro.product.model", "6045I");
     } else if (strstr(bootloader, "L7SQX0X0BG00")) {
         /* 6045B */
+        common_properties();
+        dualsim_properties("single");
+        gsm_properties("9");
         property_set("ro.build.fingerprint", "TCL/6045B/idol3:5.0.2/LRX22G/v7SQX-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQX-0 release-keys");
         property_set("ro.product.model", "6045B");
     } else if (strstr(bootloader, "L7SME0E0BG00") || (strstr(bootloader, "L7SSA0A0BG00")) {
         /* 6045K */
+        common_properties();
+        dualsim_properties("dsds");
+        gsm_properties("9");
         property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
         property_set("ro.product.model", "6045K");
     } else if (strstr(bootloader, "L7SSV0V0BG00")) {
         /* 6045Y */
+        common_properties();
+        dualsim_properties("single");
+        gsm_properties("9");
         property_set("ro.build.fingerprint", "TCL/6045Y/idol3:5.0.2/LRX22G/v7SSV-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSV-0 release-keys");
         property_set("ro.product.model", "6045Y");
     } else if (strstr(bootloader, "L7TM4040BG00")) {
         /* I806 */
+        common_properties();
+        dualsim_properties("dsds");
+        gsm_properties("10");
         property_set("ro.build.fingerprint", "TCL/TCL_i806/idol3:5.0.2/LRX22G/v7TM4-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7TM4-0 release-keys");
-        property_set("ro.product.model", "TCL_i806");
+        property_set("ro.product.model", "TCL i806");
+    } else {
+        /* 6045X */
+        common_properties();
+        dualsim_properties("single");
+        gsm_properties("9");
+        property_set("ro.build.fingerprint", "TCL/6045X/idol3:5.0.2/LRX22G/v7XXX-0:user/release-keys");
+        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7XXX-0 release-keys");
+        property_set("ro.product.model", "6045X");
     }
 
     property_get("ro.product.device", device);
