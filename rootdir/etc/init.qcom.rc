@@ -616,9 +616,9 @@ on property:sys.gpio_keys.init_ok=1
     stop disable_hall
     start enable_hall
 
-#service tctd /system/bin/tctd
-#    class core
-#    socket tctd stream 0666 root root
+service tctd /system/bin/tctd
+    class core
+    socket tctd stream 0666 root root
 #    seclabel u:r:tctd:s0
 
 service power_engine /system/bin/power_engine
@@ -626,7 +626,7 @@ service power_engine /system/bin/power_engine
     user root
     group root
     disabled
-    seclabel u:r:power_engine:s0
+#    seclabel u:r:power_engine:s0
 
 on property:persist.sys.power_ctrl=1
     start power_engine
@@ -634,9 +634,9 @@ on property:persist.sys.power_ctrl=1
 on property:persist.sys.power_ctrl=0
     stop power_engine
 
-#service powerup_reason /system/bin/powerup_reason
-#    user root
-#    group root
-#    disabled
-#    oneshot
+service powerup_reason /system/bin/powerup_reason
+    user root
+    group root
+    disabled
+    oneshot
 #    seclabel u:r:powerup_reason:s0
