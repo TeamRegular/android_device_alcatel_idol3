@@ -77,7 +77,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "TCL/6045B/idol3:5.0.2/LRX22G/v7SQX-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQX-0 release-keys");
         property_set("ro.product.model", "6045B");
-    } else if (strstr(bootloader, "L7SME0E0BG00") || (strstr(bootloader, "L7SSA0A0BG00")) {
+    } else if (strstr(bootloader, "L7SME0E0BG00") || strstr(bootloader, "L7SSA0A0BG00")) {
         /* 6045K */
         common_properties();
         dualsim_properties("dsds");
