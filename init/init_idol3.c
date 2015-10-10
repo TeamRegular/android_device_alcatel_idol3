@@ -47,8 +47,8 @@ void vendor_load_properties()
 
     if (strstr(bootloader, "L7SQR0R0BG00") || strstr(bootloader, "L7SRA0A0BG00") {
         /* 6045I (North America) */
-        property_set("ro.build.fingerprint", "TCL/6045I/idol3:5.0.2/LRX22G/v7SQR-0:user/release-keys");
-        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQR-0 release-keys");
+        property_set("ro.build.fingerprint", "TCL/6045I/idol3:5.0.2/LRX22G/v7SRA-0:user/release-keys");
+        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SRA-0 release-keys");
         property_set("ro.product.model", "6045I");
     } else if (strstr(bootloader, "L7SQX0X0BG00")) {
         /* 6045B */
@@ -57,8 +57,8 @@ void vendor_load_properties()
         property_set("ro.product.model", "6045B");
     } else if (strstr(bootloader, "L7SME0E0BG00") || (strstr(bootloader, "L7SSA0A0BG00")) {
         /* 6045K */
-        property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SME-0:user/release-keys");
-        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SME-0 release-keys");
+        property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
+        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
         property_set("ro.product.model", "6045K");
     } else if (strstr(bootloader, "L7SSV0V0BG00")) {
         /* 6045Y */
