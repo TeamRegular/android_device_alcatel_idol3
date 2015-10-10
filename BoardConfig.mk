@@ -98,8 +98,7 @@ EXTENDED_FONT_FOOTPRINT := true
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_msm
-# TODO set props based on the variant's installed bootloader
-#TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_idol3.c
+TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_idol3.c
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Lights

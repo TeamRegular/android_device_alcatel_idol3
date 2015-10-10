@@ -25,6 +25,5 @@ $(call inherit-product, device/tcl/idol3/device.mk)
 PRODUCT_DEVICE := idol3
 PRODUCT_NAME := full_idol3
 PRODUCT_BRAND := TCL
-# TODO override in target libinit
-PRODUCT_MODEL := 6045x
+PRODUCT_MODEL := Idol 3
 PRODUCT_MANUFACTURER := TCL ALCATEL ONETOUCH

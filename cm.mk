@@ -20,9 +20,4 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
 
-# TODO move to target libinit
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=TCL/6045I/idol3:5.0.2/LRX22G/v7TM4-0:user/release-keys \
-    PRIVATE_BUILD_DESC="idol3-user 5.0.2 LRX22G v7TM4-0 release-keys"
-
 PRODUCT_NAME := cm_idol3
