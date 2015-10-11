@@ -49,7 +49,10 @@ mm.enable.qcom_parser=3179041
 mm.enable.smoothstreaming=true
 mm.disable.sec_smoothstreaming=true
 media.aac_51_output_enabled=true
+def.tct.drm.cd.enabled=true
+def.tct.drm.sd.enabled=true
 drm.service.enabled=1
+feature.tct.drm.enabled=true
 
 # NITZ
 persist.rild.nitz_plmn=

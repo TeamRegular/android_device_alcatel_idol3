@@ -190,6 +190,7 @@ PRODUCT_COPY_FILES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.tcl.drm.rc \
     init.qcom.bt.sh \
     init.qcom.power.rc \
     init.qcom.rc \
