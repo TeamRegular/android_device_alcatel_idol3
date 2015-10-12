@@ -531,10 +531,7 @@ etc/firmware/cpp_firmware_v1_2_0.fw
 etc/firmware/cpp_firmware_v1_4_0.fw
 
 # DRM
-bin/drmserver.tcl
 bin/qseecomd
-lib/drm/libcombinedengine.so
-lib/drm/libseparateengine.so
 vendor/lib64/drm/libdrmwvmplugin.so
 vendor/lib64/libdrmdecrypt.so
 vendor/lib64/libdrmfs.so
