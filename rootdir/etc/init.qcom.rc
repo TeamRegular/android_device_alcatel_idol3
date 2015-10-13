@@ -69,6 +69,10 @@ on init
     chown root system /sys/class/sensors/bmg160/calibrate
     chown root system /sys/class/sensors/bmg160/poll_delay
 
+    chown root system /sys/class/sensors/kionix-accel/enable
+    chown root system /sys/class/sensors/kionix-accel/calibrate
+    chown root system /sys/class/sensors/kionix-accel/poll_delay
+
 on fs
     mount_all fstab.qcom
     mkdir /persist/data 0700 system system
