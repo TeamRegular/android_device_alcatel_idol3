@@ -5,6 +5,7 @@ vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 
 # Audio
+bin/tfa9897
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 etc/acdbdata/MTP/MTP_General_cal.acdb
 etc/acdbdata/MTP/MTP_Global_cal.acdb
@@ -550,6 +551,7 @@ vendor/lib/libwvm.so
 vendor/lib/libWVStreamControlAPI_L3.so
 
 # GPS
+bin/lowi-server
 etc/permissions/com.qualcomm.location.xml
 lib64/hw/gps.default.so
 lib64/libgps.utils.so
@@ -626,6 +628,10 @@ vendor/lib/libscale.so
 # Graphics firmware
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
+
+# HDCP
+bin/hdcpService
+lib/libDxHdcp.so
 
 # Media
 vendor/lib64/libDivxDrm.so
