@@ -36,6 +36,10 @@ on early-init
     symlink /data/tombstones /tombstones
 
 on init
+    # Preload the BoringSSL wrapper
+    export LD_PRELOAD "/system/lib/libboringssl-compat.so"
+    export LD_PRELOAD "/system/lib64/libboringssl-compat.so"
+
     # Set permissions for persist partition
     mkdir /persist 0771 system system
 
