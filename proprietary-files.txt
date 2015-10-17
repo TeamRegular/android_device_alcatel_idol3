@@ -657,7 +657,6 @@ vendor/firmware/BCM20795A2_001.003.025.0005.0035_Generic_I2C_NCD_Unsigned_config
 # Perf
 bin/msm_irqbalance
 bin/perfd
-bin/power_engine
 vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqti-perfd-client.so
 
