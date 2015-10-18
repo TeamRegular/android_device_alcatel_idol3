@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/tcl/idol3/idol3-vendor.mk)
+$(call inherit-product-if-exists, vendor/alcatel/idol3/idol3-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay

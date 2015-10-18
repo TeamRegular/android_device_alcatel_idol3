@@ -1,6 +1,6 @@
 Copyright 2015 - The CyanogenMod Project
 
-Device configuration for Alcatel Idol 3 5.5.
+Device configuration for Alcatel ONETOUCH Idol 3 5.5.
 =====================================
 
 Basic   | Spec Sheet
