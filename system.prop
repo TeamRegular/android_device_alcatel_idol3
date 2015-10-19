@@ -1,5 +1,8 @@
 # ActivityManager optimizations
 ro.config.max_starting_bg=8
+ro.sys.fw.bservice_enable=true
+ro.sys.fw.bservice_limit=5
+ro.sys.fw.bservice_age=5000
 
 # Audio
 audio.offload.buffer.size.kb=240
@@ -14,9 +17,6 @@ ro.qc.sdk.audio.fluencetype=fluence
 tunnel.audio.encode=false
 use.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
-voice.playback.conc.disabled=true
-voice.record.conc.disabled=false
-voice.voip.conc.disabled=true
 
 # Dexopt - limit to 4 cores
 ro.sys.fw.dex2oat_thread_count=4
@@ -26,7 +26,10 @@ persist.camera.mct.debug.mask=0
 persist.camera.pproc.debug.mask=0
 
 # Display
+debug.composition.type=c2d
+debug.enable.sglscale=1
 debug.mdpcomp.idletime=600
+debug.sf.gpu_comp_tiling=1
 persist.hwc.mdpcomp.enable=true
 ro.opengles.version=196608
 ro.qualcomm.cabl=0
