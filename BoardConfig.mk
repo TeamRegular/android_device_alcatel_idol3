@@ -70,9 +70,6 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 BLUETOOTH_HCI_USE_MCT := true
 
-# CMHW
-BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
-
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
@@ -121,6 +118,7 @@ COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Power
 TARGET_POWERHAL_VARIANT := qcom
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/tp_gesture/tp_device/tp_gesture_id"
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
