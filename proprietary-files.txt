@@ -55,7 +55,7 @@ vendor/lib64/libbtnv.so
 # Camera
 bin/mm-qcamera-daemon
 lib64/libchromatix_imx135_liveshot.so
-lib/hw/camera.msm8916.so
+lib/hw/camera.vendor.msm8916.so
 lib/libarcsoft_beauty_shot.so
 lib/libarcsoft_flf_engine.so
 lib/libarcsoft_night_shot.so
