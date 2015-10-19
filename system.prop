@@ -75,9 +75,11 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # Radio
 persist.data_netmgrd_mtu=1410
+persist.dcforsfr.enable=false
 persist.radio.add_power_save=1
 persist.radio.apm_sim_not_pwdn=1
 persist.radio.manual_nw_rej_ct=1
+persist.radio.mns_with_all_rat=0
 persist.radio.rat_on=combine
 persist.radio.support_subaddr=0
 rild.libargs=-d /dev/smd0
