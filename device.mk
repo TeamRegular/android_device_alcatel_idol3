@@ -115,12 +115,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     e2fsck
 
-# FM
+# FM radio
 PRODUCT_PACKAGES += \
-    FM2 \
-    FMRecord \
-    libqcomfm_jni \
-    qcom.fmradio
+    FMRadio \
+    libfmjni
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -208,6 +206,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.bt.sh \
+    init.qcom.fm.sh \
     init.qcom.post_boot.sh \
     init.qcom.power.rc \
     init.qcom.rc \
