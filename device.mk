@@ -232,6 +232,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
 
+# Stlport
+PRODUCT_PACKAGES += \
+    libstlport \
+
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
