@@ -127,7 +127,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
