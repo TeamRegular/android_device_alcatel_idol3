@@ -40,12 +40,12 @@ void common_properties()
         property_set("ro.build.product", "idol3");
 }
 
-void dualsim_properties(char multisim_config[])
+void dualsim_properties(char const multisim_config[])
 {
     property_set("persist.radio.multisim.config", multisim_config);
 }
 
-void gsm_properties(char default_network[])
+void gsm_properties(char const default_network[])
 {
     property_set("ro.telephony.default_network", default_network);
 }
