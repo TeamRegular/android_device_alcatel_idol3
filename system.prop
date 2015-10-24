@@ -44,6 +44,9 @@ mm.disable.sec_smoothstreaming=true
 media.aac_51_output_enabled=true
 drm.service.enabled=1
 
+# MultiWindow
+persist.sys.debug.multi_window=true
+
 # NITZ
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
