@@ -20,7 +20,7 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class HighTouchSensitivity {
 
-    private static String CONTROL_PATH = "/sys/class/tp_gesture/tp_device/tp_glove_id";
+    private static String CONTROL_PATH = "/sys/class/tp_glove/tp_glove_device/tp_glove_id";
 
     public static boolean isSupported() {
         return true;
