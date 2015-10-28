@@ -89,7 +89,7 @@ write_int(char const* path, int value)
 }
 
 static int
-read_int(char const* path, int value)
+read_int(char const* path, int *value)
 {
     int fd;
     static int already_warned = 0;
@@ -97,7 +97,7 @@ read_int(char const* path, int value)
     fd = open(path, O_RDWR);
     if (fd >= 0) {
         char buffer[20];
-        ssize_t amt = write(fd, buffer, (size_t)bytes);
+        ssize_t amt = read(fd, buffer, 20);
         sscanf(buffer, "%d\n", value);
         close(fd);
         return amt == -1 ? -errno : 0;
@@ -163,8 +163,6 @@ set_speaker_light_locked(struct light_device_t* dev,
             break;
     }
 
-    colorRGB = state->color;
-
     ALOGD("set_speaker_light_locked mode %d, onMS=%d, offMS=%d\n",
             state->flashMode, onMS, offMS);
 
@@ -175,9 +173,8 @@ set_speaker_light_locked(struct light_device_t* dev,
     }
 
     if (blink) {
-        write_int(BLINK_LED_FILE, blink)
+        write_int(BLINK_LED_FILE, blink);
         write_int(BRIGHT_LED_FILE, 0);
-	}
     } else {
         write_int(BRIGHT_LED_FILE, brightness_level);
     }
