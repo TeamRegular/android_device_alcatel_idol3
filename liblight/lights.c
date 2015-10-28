@@ -44,11 +44,17 @@ static int g_attention = 0;
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
-const char *const BLINK_LED_FILE
+const char*const BLINK_LED_FILE
         = "/sys/class/leds/led_G/blink";
 
-const char *const BRIGHT_LED_FILE
+const char*const BRIGHT_LED_FILE
         = "/sys/class/leds/led_G/brightness";
+
+const char*const NOW_BATTERY_LEVEL
+        = "/sys/class/power_supply/battery/capacity";
+
+const char*const BATTERY_STATUS
+        = "/sys/class/power_supply/battery/status";
 
 /**
  * device methods
@@ -76,6 +82,28 @@ write_int(char const* path, int value)
     } else {
         if (already_warned == 0) {
             ALOGE("write_int failed to open %s\n", path);
+            already_warned = 1;
+        }
+        return -errno;
+    }
+}
+
+static int
+read_int(char const* path, int value)
+{
+    int fd;
+    static int already_warned = 0;
+
+    fd = open(path, O_RDWR);
+    if (fd >= 0) {
+        char buffer[20];
+        ssize_t amt = write(fd, buffer, (size_t)bytes);
+        sscanf(buffer, "%d\n", value);
+        close(fd);
+        return amt == -1 ? -errno : 0;
+    } else {
+        if (already_warned == 0) {
+            ALOGE("read_int failed to open %s\n", path);
             already_warned = 1;
         }
         return -errno;
