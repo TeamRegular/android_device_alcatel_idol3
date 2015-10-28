@@ -44,6 +44,12 @@ static int g_attention = 0;
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
+const char *const BLINK_LED_FILE
+        = "/sys/class/leds/led_G/blink";
+
+const char *const BRIGHT_LED_FILE
+        = "/sys/class/leds/led_G/brightness";
+
 /**
  * device methods
  */
@@ -105,15 +111,13 @@ set_light_backlight(struct light_device_t* dev,
     return err;
 }
 
-/*
 static int
 set_speaker_light_locked(struct light_device_t* dev,
         struct light_state_t const* state)
 {
-    int red, green, blue;
     int blink;
     int onMS, offMS;
-    unsigned int colorRGB;
+    int brightness_level = is_lit(state);
 
     if(!dev) {
         return -1;
@@ -134,13 +138,11 @@ set_speaker_light_locked(struct light_device_t* dev,
     colorRGB = state->color;
 
 #if 0
-    ALOGD("set_speaker_light_locked mode %d, colorRGB=%08X, onMS=%d, offMS=%d\n",
-            state->flashMode, colorRGB, onMS, offMS);
+    ALOGD("set_speaker_light_locked mode %d, onMS=%d, offMS=%d\n",
+            state->flashMode, onMS, offMS);
 #endif
 
-    red = (colorRGB >> 16) & 0xFF;
-    green = (colorRGB >> 8) & 0xFF;
-    blue = colorRGB & 0xFF;
+    
 
     if (onMS > 0 && offMS > 0) {
         blink = 1;
@@ -149,22 +151,11 @@ set_speaker_light_locked(struct light_device_t* dev,
     }
 
     if (blink) {
-        if (red) {
-            if (write_int(RED_BLINK_FILE, blink))
-                write_int(RED_LED_FILE, 0);
-	}
-        if (green) {
-            if (write_int(GREEN_BLINK_FILE, blink))
-                write_int(GREEN_LED_FILE, 0);
-	}
-        if (blue) {
-            if (write_int(BLUE_BLINK_FILE, blink))
-                write_int(BLUE_LED_FILE, 0);
+        write_int(BLINK_LED_FILE, blink)
+        write_int(BRIGHT_LED_FILE, 0);
 	}
     } else {
-        write_int(RED_LED_FILE, red);
-        write_int(GREEN_LED_FILE, green);
-        write_int(BLUE_LED_FILE, blue);
+        write_int(BRIGHT_LED_FILE, brightness_level);
     }
 
     return 0;
@@ -216,7 +207,6 @@ set_light_attention(struct light_device_t* dev,
     pthread_mutex_unlock(&g_lock);
     return 0;
 }
-*/
 
 /** Close the lights device */
 static int
@@ -244,12 +234,12 @@ static int open_lights(const struct hw_module_t* module, char const* name,
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
-/*    else if (0 == strcmp(LIGHT_ID_BATTERY, name))
+    else if (0 == strcmp(LIGHT_ID_BATTERY, name))
         set_light = set_light_battery;
     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
         set_light = set_light_notifications;
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name))
-        set_light = set_light_attention; */
+        set_light = set_light_attention;
     else
         return -EINVAL;
 
