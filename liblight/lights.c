@@ -44,16 +44,16 @@ static int g_attention = 0;
 char const*const LCD_FILE
         = "/sys/class/leds/lcd-backlight/brightness";
 
-const char*const BLINK_LED_FILE
+char const*const BLINK_LED_FILE
         = "/sys/class/leds/led_G/blink";
 
-const char*const BRIGHT_LED_FILE
+char const*const BRIGHT_LED_FILE
         = "/sys/class/leds/led_G/brightness";
 
-const char*const NOW_BATTERY_LEVEL
+char const*const NOW_BATTERY_LEVEL
         = "/sys/class/power_supply/battery/capacity";
 
-const char*const BATTERY_STATUS
+char const*const BATTERY_STATUS
         = "/sys/class/power_supply/battery/status";
 
 /**
