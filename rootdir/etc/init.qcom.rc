@@ -347,8 +347,6 @@ on boot
     # Touchpanel
     chown system system /sys/class/tp_gesture/tp_device/tp_gesture_id
     chmod 664 /sys/class/tp_gesture/tp_device/tp_gesture_id
-    chown system system /sys/class/tp_glove/tp_glove_device/tp_glove_id
-    chmod 664 /sys/class/tp_glove/tp_glove_device/tp_glove_id
 
     # TFA9897
     chown system audio /dev/i2c-4
