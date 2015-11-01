@@ -97,6 +97,18 @@ $(PLAYREADY_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(PLAYREADY_SYMLINKS)
 
+TOUCH_FIRMWARE := \
+    ft_fw.bin Synaptics_fw_update.img
+
+TOUCH_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(TOUCH_FIRMWARE)))
+$(TOUCH_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Touch firmware firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /persist/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(TOUCH_SYMLINKS)
+
 WCNSS_IMAGES := \
     wcnss.b00 wcnss.b01 wcnss.b02 wcnss.b04 wcnss.b06 \
     wcnss.b09 wcnss.b10 wcnss.b11 wcnss.mdt
@@ -121,6 +133,13 @@ $(WV_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(WV_SYMLINKS)
+
+# Create links for audcal data files
+$(shell mkdir -p $(TARGET_OUT)/etc/firmware/wcd9306; \
+	ln -sf /data/misc/audio/mbhc.bin \
+		$(TARGET_OUT)/etc/firmware/wcd9306/wcd9306_mbhc.bin;\
+	ln -sf /data/misc/audio/wcd9320_anc.bin \
+		$(TARGET_OUT)/etc/firmware/wcd9306/wcd9306_anc.bin)
 
 # Create a link for the WCNSS config file, which ends up as a writable
 # version in /data/misc/wifi

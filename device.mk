@@ -220,11 +220,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine.conf
 
-# Touch firmware
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/touch/ft_fw.bin:system/etc/firmware/ft_fw.bin \
-    $(LOCAL_PATH)/touch/Synaptics_fw_update.img:system/etc/firmware/Synaptics_fw_update.img
-
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
