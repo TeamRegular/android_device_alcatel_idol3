@@ -20,4 +20,6 @@ extern "C" int _ZN7android6Parcel13writeString16EPKDsm();
 extern "C" int _ZN7android6Parcel13writeString16EPKtm() {
     return _ZN7android6Parcel13writeString16EPKDsm();
 }
+
+extern "C" void RIL_register_socket() {}
 #endif
