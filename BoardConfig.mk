@@ -42,7 +42,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_CPU_CORTEX_A53 := true
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
+BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 109f10eed3f021e3 androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
