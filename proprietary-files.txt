@@ -5,9 +5,8 @@ vendor/lib/libadsprpc.so
 vendor/lib/libfastcvopt.so
 
 # Audio
-lib64/hw/audio.primary.msm8916.so
+bin/tfa9897
 lib64/libtfa9897.so
-lib/hw/audio.primary.msm8916.so
 lib/libtfa9897.so
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so

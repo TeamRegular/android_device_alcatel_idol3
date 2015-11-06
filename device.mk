@@ -66,6 +66,8 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk
 PRODUCT_PACKAGES += \
     audiod \
     audio.a2dp.default \
+    audio_amplifier.msm8916 \
+    audio.primary.msm8916 \
     audio.r_submix.default \
     audio.usb.default \
     libqcompostprocbundle \
@@ -92,6 +94,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/tfa9897/seltech_stereo.cnt:system/etc/tfa9897/seltech_stereo.cnt \
     $(LOCAL_PATH)/audio/tfa9897/seltech_top.cnt:system/etc/tfa9897/seltech_top.cnt \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml
 
