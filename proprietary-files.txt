@@ -633,16 +633,10 @@ etc/firmware/a420_pm4.fw
 
 # Media
 vendor/lib64/libDivxDrm.so
-vendor/lib64/libExtendedExtractor.so
-vendor/lib64/libmmosal.so
-vendor/lib64/libmmparser.so
 vendor/lib64/libOmxAacDec.so
 vendor/lib/libSHIMDivxDrm.so
 vendor/lib/libDivxDrm.so
-vendor/lib/libExtendedExtractor.so
 vendor/lib/libI420colorconvert.so
-vendor/lib/libmmosal.so
-vendor/lib/libmmparser.so
 vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxEvrcDec.so
