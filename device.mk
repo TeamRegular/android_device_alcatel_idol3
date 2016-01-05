@@ -156,8 +156,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_PACKAGES += \
-    libdashplayer \
-    libextmedia_jni \
     libOmxAacEnc \
     libOmxAmrEnc \
     libOmxCore \
@@ -165,12 +163,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
-    libqcmediaplayer \
-    libstagefrighthw \
-    qcmediaplayer
-
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+    libstagefrighthw
 
 # Misc
 PRODUCT_PACKAGES += \
