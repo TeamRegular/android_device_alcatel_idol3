@@ -205,6 +205,10 @@ PRODUCT_PACKAGES += \
     init.tct.gpio_keys.sh \
     ueventd.qcom.rc
 
+# RIL
+PRODUCT_PACKAGES += \
+    librmnetctl
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
