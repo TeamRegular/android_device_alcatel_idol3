@@ -80,7 +80,7 @@ ro.use_data_netmgrd=true
 telephony.lteOnGsmDevice=1
 
 # Scheduler
-sys.io.scheduler=row
+sys.io.scheduler=bfq
 
 # Time
 persist.timed.enable=true
