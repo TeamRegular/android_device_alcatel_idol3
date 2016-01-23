@@ -656,9 +656,7 @@ lib/libDxHdcp.so
 
 # Marshmallow
 lib64/libstlport.so
-lib64/libsysutils_local.so
 lib/libstlport.so
-lib/libsysutils_local.so
 
 # Media
 vendor/lib64/libDivxDrm.so
