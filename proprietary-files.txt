@@ -654,8 +654,8 @@ vendor/firmware/BCM20795A2_001.003.025.0005.0043_Generic_I2C_NCD_Unsigned_config
 
 # Perf
 bin/msm_irqbalance
-bin/perfd
 bin/power_engine
+vendor/bin/perfd
 vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqti-perfd-client.so
 
@@ -760,7 +760,7 @@ etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
 # Thermal
-bin/thermal-engine
+vendor/bin/thermal-engine
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 vendor/lib/libthermalclient.so
