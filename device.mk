@@ -222,8 +222,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg
 
 # Stlport
-#PRODUCT_PACKAGES += \
-#    libstlport \
+PRODUCT_PACKAGES += \
+    libstlport \
 
 # Thermal
 PRODUCT_COPY_FILES += \

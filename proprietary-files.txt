@@ -654,10 +654,6 @@ etc/firmware/a420_pm4.fw
 bin/hdcpService
 lib/libDxHdcp.so
 
-# Marshmallow
-lib64/libstlport.so
-lib/libstlport.so
-
 # Media
 vendor/lib64/libDivxDrm.so
 vendor/lib64/libExtendedExtractor.so
