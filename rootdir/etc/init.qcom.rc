@@ -25,7 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-#import init.qcom.power.rc
+import init.qcom.power.rc
 import init.qcom.usb.rc
 
 on early-init
@@ -501,12 +501,6 @@ service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
     disabled
     oneshot
 
-service qcom-post-boot /system/bin/sh /system/etc/init.qcom.post_boot.sh
-    class late_start
-    user root
-    disabled
-    oneshot
-
 service config-zram /system/bin/sh /system/etc/init.qcom.zram.sh
    class late_start
    user root
@@ -514,7 +508,6 @@ service config-zram /system/bin/sh /system/etc/init.qcom.zram.sh
    oneshot
 
 on property:sys.boot_completed=1
-    start qcom-post-boot
     start config-zram
 
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
