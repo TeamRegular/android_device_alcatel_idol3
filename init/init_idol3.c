@@ -71,9 +71,9 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || strncmp(platform, ANDROID_TARGET, PROP_VALUE_MAX))
         return;
 
-    property_get("ro.tct.curef", curef_version);
+    property_get("ro.cm.curef", curef_version);
 
-    if (strstr(curef_version, "6045I-2AALUS7")) {
+    if (strstr(curef_version, "6045I")) {
         /* 6045I (North America) */
         common_properties();
         dualsim_properties("single");
@@ -82,7 +82,16 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045I/idol3:5.0.2/LRX22G/v7SRA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SRA-0 release-keys");
         property_set("ro.product.model", "6045I");
-    } else if (strstr(curef_version, "6045K-2AALRS7") || strstr(curef_version, "6045K-2ATEHR7")) {
+    } else if (strstr(curef_version, "6045B")) {
+        /* 6045B */
+        common_properties();
+        dualsim_properties("single");
+        tct_properties("idol3");
+        gsm_properties("9");
+        property_set("ro.build.fingerprint", "TCL/6045B/idol3:5.0.2/LRX22G/v7SQX-0:user/release-keys");
+        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQX-0 release-keys");
+        property_set("ro.product.model", "6045B");
+    } else if (strstr(curef_version, "6045K")) {
         /* 6045K */
         common_properties();
         dualsim_properties("dsds");
@@ -91,7 +100,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
         property_set("ro.product.model", "6045K");
-    } else if (strstr(curef_version, "6045Y-2AALHU7-2") || strstr(curef_version, "6045Y-2AALWE7") || strstr(curef_version, "6045Y-2AALCZ7")) {
+    } else if (strstr(curef_version, "6045Y")) {
         /* 6045Y */
         common_properties();
         dualsim_properties("single");
