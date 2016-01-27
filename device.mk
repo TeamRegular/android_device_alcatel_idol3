@@ -203,7 +203,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.qcom.zram.sh \
     init.recovery.qcom.rc \
     init.tct.gpio_keys.sh \
     init.tct.variant.sh \
