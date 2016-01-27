@@ -44,9 +44,6 @@ persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 ro.pip.gated=0
 
-# Hall
-persist.sys.switchFlip.on=1
-
 # Media
 mm.enable.qcom_parser=3179041
 mm.enable.smoothstreaming=true
