@@ -628,11 +628,6 @@ on property:sys.gpio_keys.init_ok=1
     stop disable_hall
     start enable_hall
 
-service tctd /system/bin/tctd
-    class core
-    socket tctd stream 0666 root root
-#    seclabel u:r:tctd:s0
-
 service power_engine /system/bin/power_engine
     class late_start
     user root

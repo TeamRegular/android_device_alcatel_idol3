@@ -761,9 +761,6 @@ etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
-# TCT daemon
-bin/tctd
-
 # Thermal
 bin/thermal-engine
 vendor/lib64/libthermalclient.so
