@@ -627,16 +627,3 @@ on property:sys.gpio_keys.init_ok=0
 on property:sys.gpio_keys.init_ok=1
     stop disable_hall
     start enable_hall
-
-service power_engine /system/bin/power_engine
-    class late_start
-    user root
-    group root
-    disabled
-#    seclabel u:r:power_engine:s0
-
-on property:persist.sys.power_ctrl=1
-    start power_engine
-
-on property:persist.sys.power_ctrl=0
-    stop power_engine
