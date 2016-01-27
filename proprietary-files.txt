@@ -629,10 +629,6 @@ vendor/lib/libscale.so
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
-# HDCP
-bin/hdcpService
-lib/libDxHdcp.so
-
 # Media
 vendor/lib64/libDivxDrm.so
 vendor/lib64/libExtendedExtractor.so
