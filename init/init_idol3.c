@@ -50,12 +50,6 @@ void gsm_properties(char default_network[])
     property_set("ro.telephony.default_network", default_network);
 }
 
-void tct_properties(char tct_product[])
-{
-    property_set("ro.tct.product", tct_product);
-}
-
-
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char platform[PROP_VALUE_MAX];
@@ -78,7 +72,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         dualsim_properties("single");
         gsm_properties("9");
-        tct_properties("idol3");
         property_set("ro.build.fingerprint", "TCL/6045I/idol3:5.0.2/LRX22G/v7SRA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SRA-0 release-keys");
         property_set("ro.product.model", "6045I");
@@ -86,7 +79,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         /* 6045B */
         common_properties();
         dualsim_properties("single");
-        tct_properties("idol3");
         gsm_properties("9");
         property_set("ro.build.fingerprint", "TCL/6045B/idol3:5.0.2/LRX22G/v7SQX-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQX-0 release-keys");
@@ -96,7 +88,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         dualsim_properties("dsds");
         gsm_properties("9");
-        tct_properties("idol3");
         property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
         property_set("ro.product.model", "6045K");
@@ -105,7 +96,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         dualsim_properties("single");
         gsm_properties("9");
-        tct_properties("idol3");
         property_set("ro.build.fingerprint", "TCL/6045Y/idol3:5.0.2/LRX22G/v7SSV-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSV-0 release-keys");
         property_set("ro.product.model", "6045Y");
@@ -114,7 +104,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         dualsim_properties("single");
         gsm_properties("9");
-        tct_properties("idol3");
         property_set("ro.build.fingerprint", "TCL/6045X/idol3:5.0.2/LRX22G/v7XXX-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7XXX-0 release-keys");
         property_set("ro.product.model", "6045X");
