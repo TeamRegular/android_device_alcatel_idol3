@@ -129,6 +129,18 @@ TARGET_RIL_VARIANT := caf
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
+BOARD_SEPOLICY_DIRS += device/alcatel/idol3/sepolicy
+
+BOARD_SEPOLICY_UNION += \
+    bluetooth_loader.te \
+    file.te \
+    file_contexts \
+    healthd.te \
+    init_shell.te \
+    mediaserver.te \
+    property_contexts \
+    rmt_storage.te \
+    system_server.te
 
 # Time services
 BOARD_USES_QC_TIME_SERVICES := true
