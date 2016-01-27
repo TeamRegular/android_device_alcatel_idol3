@@ -79,9 +79,6 @@ rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
 ro.use_data_netmgrd=true
 telephony.lteOnGsmDevice=1
 
-# Scheduler
-sys.io.scheduler=bfq
-
 # Time
 persist.timed.enable=true
 
