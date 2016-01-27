@@ -1,0 +1,5 @@
+# CmHardwareService
+type sysfs_tp_gesture, fs_type, sysfs_type;
+
+# variant prop
+type variant_prop, property_type;
