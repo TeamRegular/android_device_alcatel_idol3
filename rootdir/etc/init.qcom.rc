@@ -640,10 +640,3 @@ on property:persist.sys.power_ctrl=1
 
 on property:persist.sys.power_ctrl=0
     stop power_engine
-
-service powerup_reason /system/bin/powerup_reason
-    user root
-    group root
-    disabled
-    oneshot
-#    seclabel u:r:powerup_reason:s0
