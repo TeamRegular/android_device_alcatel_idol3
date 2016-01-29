@@ -555,20 +555,6 @@
              channels="1" />
     </EncoderProfile>
 
-<!--    <EncoderProfile quality="timelapsewqvga" fileFormat="mp4" duration="30">
-      <Video codec="h264"
-             bitRate="720000"
-             width="432"
-             height="240"
-             frameRate="30" />-->
-
-      <!-- audio setting is ignored -->
-<!--      <Audio codec="amrnb"
-             bitRate="12200"
-             sampleRate="8000"
-             channels="1" />
-    </EncoderProfile>-->
-
     <EncoderProfile quality="timelapsevga" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="2000000"
@@ -689,10 +675,10 @@
         minSampleRate="8000" maxSampleRate="8000"
         minChannels="1" maxChannels="1" />
 
-<!--    <AudioEncoderCap name="lpcm" enabled="true"
+   <AudioEncoderCap name="lpcm" enabled="true"
         minBitRate="768000" maxBitRate="4608000"
         minSampleRate="48000" maxSampleRate="48000"
-        minChannels="1" maxChannels="6" />-->
+        minChannels="1" maxChannels="6" />
 
     <!--
         FIXME:
