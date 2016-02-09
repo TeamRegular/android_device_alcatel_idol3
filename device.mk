@@ -204,7 +204,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.recovery.qcom.rc \
-    init.tct.variant.sh \
     ueventd.qcom.rc
 
 # Sensors
