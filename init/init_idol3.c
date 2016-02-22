@@ -95,6 +95,14 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
         property_set("ro.product.model", "6045K");
+    } else if (strstr(variant, "6045O")) {
+        /* 6045O Cricket */
+        common_properties();
+        dualsim_properties("single");
+        gsm_properties("9");
+        property_set("ro.build.fingerprint", "TCL/6045O/idol3:5.0.2/LRX22G/v5AMB:user/release-keys");
+        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v5AMB release-keys");
+        property_set("ro.product.model", "6045O");
     } else if (strstr(variant, "6045Y")) {
         /* 6045Y */
         common_properties();
