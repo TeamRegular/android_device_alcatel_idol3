@@ -599,7 +599,7 @@ service power_engine /system/bin/power_engine
     user root
     group root
     disabled
-#    seclabel u:r:power_engine:s0
+    seclabel u:r:power_engine:s0
 
 on property:persist.sys.power_ctrl=1
     start power_engine

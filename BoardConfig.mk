@@ -138,6 +138,7 @@ BOARD_SEPOLICY_UNION += \
     healthd.te \
     init_shell.te \
     mediaserver.te \
+    power_engine.te \
     property_contexts \
     rmt_storage.te \
     system_server.te \
