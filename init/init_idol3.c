@@ -26,7 +26,6 @@
  */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
@@ -54,9 +53,8 @@ void gsm_properties(char default_network[])
 void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *board_type)
 {
     char platform[PROP_VALUE_MAX];
+    char curef_version[PROP_VALUE_MAX];
     char device[PROP_VALUE_MAX];
-    char variant[92];
-    FILE *dv;
     int rc;
 
     UNUSED(msm_id);
@@ -67,11 +65,9 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     if (!rc || strncmp(platform, ANDROID_TARGET, PROP_VALUE_MAX))
         return;
 
-    dv = popen("/system/xbin/strings /dev/block/bootdevice/by-name/traceability | /system/xbin/grep '6045' | /system/xbin/cut -c4-8" , "r");
-    fgets(variant, sizeof(variant), dv);
-    pclose(dv);
+    property_get("ro.cm.curef", curef_version);
 
-    if (strstr(variant, "6045I")) {
+    if (strstr(curef_version, "6045I")) {
         /* 6045I (North America) */
         common_properties();
         dualsim_properties("single");
@@ -79,7 +75,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045I/idol3:5.0.2/LRX22G/v7SRA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SRA-0 release-keys");
         property_set("ro.product.model", "6045I");
-    } else if (strstr(variant, "6045B")) {
+    } else if (strstr(curef_version, "6045B")) {
         /* 6045B */
         common_properties();
         dualsim_properties("single");
@@ -87,7 +83,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045B/idol3:5.0.2/LRX22G/v7SQX-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQX-0 release-keys");
         property_set("ro.product.model", "6045B");
-    } else if (strstr(variant, "6045K")) {
+    } else if (strstr(curef_version, "6045K")) {
         /* 6045K */
         common_properties();
         dualsim_properties("dsds");
@@ -95,7 +91,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
         property_set("ro.product.model", "6045K");
-    } else if (strstr(variant, "6045O")) {
+    } else if (strstr(curef_version, "6045O")) {
         /* 6045O Cricket */
         common_properties();
         dualsim_properties("single");
@@ -103,7 +99,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "TCL/6045O/idol3:5.0.2/LRX22G/v5AMB:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v5AMB release-keys");
         property_set("ro.product.model", "6045O");
-    } else if (strstr(variant, "6045Y")) {
+    } else if (strstr(curef_version, "6045Y")) {
         /* 6045Y */
         common_properties();
         dualsim_properties("single");
@@ -122,5 +118,5 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
     }
 
     property_get("ro.product.device", device);
-    ERROR("Found curef id %s setting build properties for %s device\n", variant, device);
+    ERROR("Found curef id %s setting build properties for %s device\n", curef_version, device);
 }
