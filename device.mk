@@ -75,6 +75,24 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/audio/acdb/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP_General_cal.acdb:system/etc/acdbdata/MTP/MTP_General_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP_Global_cal.acdb:system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP_Handset_cal.acdb:system/etc/acdbdata/MTP/MTP_Handset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP_Hdmi_cal.acdb:system/etc/acdbdata/MTP/MTP_Hdmi_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP_Headset_cal.acdb:system/etc/acdbdata/MTP/MTP_Headset_cal.acdb \
+    $(LOCAL_PATH)/audio/acdb/MTP_Speaker_cal.acdb:system/etc/acdbdata/MTP/MTP_Speaker_cal.acdb \
+    $(LOCAL_PATH)/audio/tfa9897/AAC/seltech_bottom.cnt:system/etc/tfa9897/AAC/seltech_bottom.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/AAC/seltech_stereo.cnt:system/etc/tfa9897/AAC/seltech_stereo.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/AAC/seltech_top.cnt:system/etc/tfa9897/AAC/seltech_top.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/LC/seltech_bottom.cnt:system/etc/tfa9897/LC/seltech_bottom.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/LC/seltech_stereo.cnt:system/etc/tfa9897/LC/seltech_stereo.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/LC/seltech_top.cnt:system/etc/tfa9897/LC/seltech_top.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/seltech_bottom.cnt:system/etc/tfa9897/seltech_bottom.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/seltech_bottom.ini:system/etc/tfa9897/seltech_bottom.ini \
+    $(LOCAL_PATH)/audio/tfa9897/seltech_stereo.cnt:system/etc/tfa9897/seltech_stereo.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/seltech_top.cnt:system/etc/tfa9897/seltech_top.cnt \
+    $(LOCAL_PATH)/audio/tfa9897/seltech_top.ini:system/etc/tfa9897/seltech_top.ini \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml
