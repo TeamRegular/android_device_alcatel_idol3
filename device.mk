@@ -89,10 +89,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/tfa9897/LC/seltech_stereo.cnt:system/etc/tfa9897/LC/seltech_stereo.cnt \
     $(LOCAL_PATH)/audio/tfa9897/LC/seltech_top.cnt:system/etc/tfa9897/LC/seltech_top.cnt \
     $(LOCAL_PATH)/audio/tfa9897/seltech_bottom.cnt:system/etc/tfa9897/seltech_bottom.cnt \
-    $(LOCAL_PATH)/audio/tfa9897/seltech_bottom.ini:system/etc/tfa9897/seltech_bottom.ini \
     $(LOCAL_PATH)/audio/tfa9897/seltech_stereo.cnt:system/etc/tfa9897/seltech_stereo.cnt \
     $(LOCAL_PATH)/audio/tfa9897/seltech_top.cnt:system/etc/tfa9897/seltech_top.cnt \
-    $(LOCAL_PATH)/audio/tfa9897/seltech_top.ini:system/etc/tfa9897/seltech_top.ini \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:system/etc/mixer_paths_mtp.xml

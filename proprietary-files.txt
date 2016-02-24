@@ -60,6 +60,7 @@ vendor/lib64/libmmcamera_ov8858_idol3.so
 vendor/lib64/libmmcamera_ov8858_q8v19w.so
 vendor/lib64/libmmcamera_ov8858.so
 vendor/lib64/libmmcamera_s5k3m2_idol3.so
+vendor/lib64/libmmcamera_s5k4h5yc_idol3_eyeverify.so
 vendor/lib64/libmmcamera_s5k4h5yc_idol3.so
 vendor/lib/libjpegdhw.so
 vendor/lib/libjpegehw.so
@@ -113,6 +114,7 @@ vendor/lib/libmmcamera_s5k3l1yx.so
 vendor/lib/libmmcamera_s5k3m2_idol3_eeprom.so
 vendor/lib/libmmcamera_s5k3m2_idol3.so
 vendor/lib/libmmcamera_S5K4E1_13P1BA.so
+vendor/lib/libmmcamera_s5k4h5yc_idol3_eyeverify.so
 vendor/lib/libmmcamera_s5k4h5yc_idol3.so
 vendor/lib/libmmcamera_SKUAA_ST_gc0339.so
 vendor/lib/libmmcamera_skuab_shinetech_gc0339.so
@@ -267,6 +269,11 @@ vendor/lib64/libchromatix_s5k3m2_idol3_preview.so
 vendor/lib64/libchromatix_s5k3m2_idol3_snapshot.so
 vendor/lib64/libchromatix_s5k4h5yc_idol3_common.so
 vendor/lib64/libchromatix_s5k4h5yc_idol3_default_video.so
+vendor/lib64/libchromatix_s5k4h5yc_idol3_eyeverify_common.so
+vendor/lib64/libchromatix_s5k4h5yc_idol3_eyeverify_default_video.so
+vendor/lib64/libchromatix_s5k4h5yc_idol3_eyeverify_preview.so
+vendor/lib64/libchromatix_s5k4h5yc_idol3_eyeverify_snapshot.so
+vendor/lib64/libchromatix_s5k4h5yc_idol3_eyeverify_zsl.so
 vendor/lib64/libchromatix_s5k4h5yc_idol3_preview.so
 vendor/lib64/libchromatix_s5k4h5yc_idol3_snapshot.so
 vendor/lib64/libchromatix_s5k4h5yc_idol3_zsl.so
@@ -469,6 +476,11 @@ vendor/lib/libchromatix_S5K4E1_13P1BA_video_hd.so
 vendor/lib/libchromatix_S5K4E1_13P1BA_zsl.so
 vendor/lib/libchromatix_s5k4h5yc_idol3_common.so
 vendor/lib/libchromatix_s5k4h5yc_idol3_default_video.so
+vendor/lib/libchromatix_s5k4h5yc_idol3_eyeverify_common.so
+vendor/lib/libchromatix_s5k4h5yc_idol3_eyeverify_default_video.so
+vendor/lib/libchromatix_s5k4h5yc_idol3_eyeverify_preview.so
+vendor/lib/libchromatix_s5k4h5yc_idol3_eyeverify_snapshot.so
+vendor/lib/libchromatix_s5k4h5yc_idol3_eyeverify_zsl.so
 vendor/lib/libchromatix_s5k4h5yc_idol3_preview.so
 vendor/lib/libchromatix_s5k4h5yc_idol3_snapshot.so
 vendor/lib/libchromatix_s5k4h5yc_idol3_zsl.so
@@ -628,7 +640,7 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libSHIMDivxDrm.so
 
 # NFC
-vendor/firmware/BCM20795A2_001.003.025.0005.0035_Generic_I2C_NCD_Unsigned_configdata.ncd
+vendor/firmware/BCM20795A2_001.003.025.0005.0043_Generic_I2C_NCD_Unsigned_configdata.ncd
 
 # Perf
 bin/msm_irqbalance
