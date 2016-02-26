@@ -15,6 +15,9 @@ tunnel.audio.encode=false
 use.voice.path.for.pcm.voip=true
 vidc.enc.narrow.searchrange=1
 
+# Camera
+persist.camera.cpp.duplication=false
+
 # Dexopt - limit to 4 cores
 ro.sys.fw.dex2oat_thread_count=4
 
