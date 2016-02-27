@@ -156,7 +156,9 @@ PRODUCT_COPY_FILES += \
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl
+    $(LOCAL_PATH)/keylayout/ft5x06_ts.kl:system/usr/keylayout/ft5x06_ts.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_045e_Product_0291.kl:system/usr/keylayout/Vendor_045e_Product_0291.kl \
+    $(LOCAL_PATH)/keylayout/Vendor_045e_Product_0291.kl:system/usr/keylayout/Vendor_045e_Product_02d1.kl \
 
 # Keystore
 PRODUCT_PACKAGES += \
