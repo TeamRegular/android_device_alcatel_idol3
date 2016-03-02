@@ -117,9 +117,6 @@ PRODUCT_PACKAGES += \
     libtinyxml \
     memtrack.msm8916
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/calib.cfg:system/etc/calib.cfg
-
 # Filesystem
 PRODUCT_PACKAGES += \
     e2fsck
