@@ -13,11 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include device/cyanogen/msm8916-common/BoardConfigCommon.mk
+LOCAL_PATH := device/alcatel/idol3
 
-include device/wileyfox/kipper/board/*.mk
+TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
-TARGET_BOARD_INFO_FILE := device/wileyfox/kipper/board-info.txt
+
+include device/alcatel/idol3/board/*.mk
 
 # inherit from the proprietary version
--include vendor/wileyfox/kipper/BoardConfigVendor.mk
+-include vendor/alcatel/idol3/BoardConfigVendor.mk

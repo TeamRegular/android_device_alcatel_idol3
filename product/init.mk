@@ -1,4 +1,8 @@
 # Init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
-    init.target.rc
+    init.qcom.power.rc \
+    init.qcom.rc \
+    ueventd.qcom.rc
+
+

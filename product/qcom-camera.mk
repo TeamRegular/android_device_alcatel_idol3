@@ -1,7 +1,5 @@
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm8916 \
-    libmm-qcamera \
     Snap
 
 # Permissions
@@ -12,4 +10,5 @@ PRODUCT_COPY_FILES += \
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false \
-    persist.camera.hal.debug.mask=0
+    persist.camera.hal.debug.mask=0 \
+    persist.camera.pip.support=0

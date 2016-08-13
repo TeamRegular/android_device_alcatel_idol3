@@ -1,3 +1,3 @@
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/wileyfox/kipper/sepolicy
+    device/alcatel/idol3/sepolicy

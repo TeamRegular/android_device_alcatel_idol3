@@ -1,3 +1,3 @@
-# Recovery
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/kipper-releasekey
+# Recovery Script
+PRODUCT_PACKAGES += \
+    init.recovery.qcom.rc

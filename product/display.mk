@@ -4,7 +4,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Panel
 PRODUCT_PACKAGES += \
-    pp_calib_data_goworld_1080p_video_mode_dsi_panel.xml
+    pp_calib_data_r63315_1080p_videomode_panel.xml
 
 # Screen density
 PRODUCT_PROPERTY_OVERRIDES += \

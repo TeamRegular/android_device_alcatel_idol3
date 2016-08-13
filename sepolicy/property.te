@@ -1,1 +1,2 @@
-type cktnv_prop, property_type;
+# variant prop
+type variant_prop, property_type;
