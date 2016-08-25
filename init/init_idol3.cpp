@@ -103,17 +103,16 @@ void gsm_properties(char const default_network[])
 
 void vendor_load_properties()
 {
-    char curef_version[PROP_VALUE_MAX];
-    char device[PROP_VALUE_MAX];
-    int rc;
+    std::string curef_version;
+    std::string;
 
-    rc = property_get("ro.cm.device", device);
-    if (!rc || strncmp(device, "idol3", PROP_VALUE_MAX))
+    device = property_get("ro.cm.device");
+    if (device != idol3)
         return;
 
-    property_get("ro.cm.curef", curef_version);
+    curef_version = property_get("ro.cm.curef");
 
-    if (strstr(curef_version, "6045I")) {
+    if (curef_version == "6045I")) {
         /* 6045I (North America) */
         common_properties();
         dualsim_properties("single");
@@ -121,7 +120,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "TCL/6045I/idol3:6.0.1/MMB29M/v7VAB-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 6.0.1 MMB29M v7VAB-0 release-keys");
         property_set("ro.product.model", "6045I");
-    } else if (strstr(curef_version, "6045B")) {
+    } else if (curef_version == "6045B")) {
         /* 6045B */
         common_properties();
         dualsim_properties("single");
@@ -129,7 +128,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "TCL/6045B/idol3:5.0.2/LRX22G/v7SQX-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SQX-0 release-keys");
         property_set("ro.product.model", "6045B");
-    } else if (strstr(curef_version, "6045K")) {
+    } else if (curef_version == "6045K")) {
         /* 6045K */
         common_properties();
         dualsim_properties("dsds");
@@ -137,7 +136,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "TCL/6045K/idol3:6.0.1/MMB29M/v7VG6-0:user/release-keys");
         property_set("ro.build.description", "idol3-user 6.0.1 MMB29M v7VG6-0 release-keys");
         property_set("ro.product.model", "6045K");
-    } else if (strstr(curef_version, "6045O")) {
+    } else if (curef_version == "6045O")) {
         /* 6045O Cricket */
         common_properties();
         dualsim_properties("single");
@@ -145,7 +144,7 @@ void vendor_load_properties()
         property_set("ro.build.fingerprint", "TCL/6045O/idol3:5.0.2/LRX22G/v5AMB:user/release-keys");
         property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v5AMB release-keys");
         property_set("ro.product.model", "6045O");
-    } else if (strstr(curef_version, "6045Y")) {
+    } else if (curef_version == "6045Y")) {
         /* 6045Y */
         common_properties();
         dualsim_properties("single");
@@ -163,8 +162,8 @@ void vendor_load_properties()
         property_set("ro.product.model", "TCL i806");
     }
 
-    property_get("ro.product.device", device);
-    ERROR("Found curef id %s setting build properties for %s device\n", curef_version, device);
+    device = property_get("ro.product.device");
+    ERROR("Found curef id %s setting build properties for %s device\n", curef_version.c_str(), device.c_str());
 
     init_alarm_boot_properties();
 }
