@@ -348,14 +348,14 @@ on property:bluetooth.isEnabled=true
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
 
-service cnd /system/bin/cnd
-    class main
-    socket cnd stream 660 root inet
+#service cnd /system/bin/cnd
+#    class main
+#    socket cnd stream 660 root inet
 
-service dpmd /system/bin/dpmd
-    class late_start
-    socket dpmd stream 660 root system
-    group system readproc
+#service dpmd /system/bin/dpmd
+#    class late_start
+#    socket dpmd stream 660 root system
+#    group system readproc
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
@@ -442,10 +442,10 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service loc_launcher /system/bin/loc_launcher
+#service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
-    class late_start
-    group gps inet net_raw qcom_diag net_admin wifi
+#    class late_start
+#    group gps inet net_raw qcom_diag net_admin wifi
 
 service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
     class late_start
