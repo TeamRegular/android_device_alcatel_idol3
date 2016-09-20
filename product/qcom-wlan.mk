@@ -22,7 +22,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/modules/wlan.ko:system/lib/modules/wlan.ko \
     $(LOCAL_PATH)/wcnss/hostapd.accept:system/etc/hostapd/hostapd.accept \
     $(LOCAL_PATH)/wcnss/hostapd.conf:system/etc/hostapd/hostapd_default.conf \
     $(LOCAL_PATH)/wcnss/hostapd.deny:system/etc/hostapd/hostapd.deny \

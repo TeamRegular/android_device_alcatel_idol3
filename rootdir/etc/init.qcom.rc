@@ -77,8 +77,6 @@ on post-fs
     write /sys/class/android_usb/android0/f_mass_storage/rom/file /system/etc/USBDriver.iso
 
     # NFC
-    insmod /system/lib/modules/bcm2079x-i2c.ko
-    wait /dev/bcm2079x
     chown nfc nfc /dev/bcm2079x
     chmod 0660 /dev/bcm2079x
 
