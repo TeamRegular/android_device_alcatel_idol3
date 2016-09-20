@@ -1,6 +1,4 @@
 CPUSETS
-
 FM
-Radio props
 GPS/Location
 SELinux
