@@ -1,4 +1,3 @@
 CPUSETS
 FM
-GPS/Location
 SELinux
