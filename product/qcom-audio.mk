@@ -40,10 +40,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    av.streaming.offload.enable=true \
+    audio.deep_buffer.media=true \
     audio.offload.buffer.size.kb=64 \
     audio.offload.gapless.enabled=true \
     audio.offload.min.duration.secs=30 \
     audio.offload.pcm.16bit.enable=false \
     audio.offload.pcm.24bit.enable=false \
+    av.streaming.offload.enable=true \
     use.voice.path.for.pcm.voip=true
