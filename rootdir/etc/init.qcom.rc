@@ -80,7 +80,7 @@ on post-fs
     chown nfc nfc /dev/bcm2079x
     chmod 0660 /dev/bcm2079x
 
-    exec u:r:qti_init_shell:s0 -- /system/bin/init.tct.variant.sh
+    start set_variant
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -596,7 +596,7 @@ on property:persist.sys.power_ctrl=1
 on property:persist.sys.power_ctrl=0
     stop power_engine
 
-#service set_variant /system/bin/init.tct.variant.sh
-#    class core
-#    user root
-#    oneshot
+service set_variant /system/bin/sh /init.tct.variant.sh
+    class core
+    user root
+    oneshot
