@@ -1,7 +1,10 @@
 # Sensors
+PRODUCT_PACKAGES += \
+    sensors.msm8916
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/calmodule.cfg:system/vendor/etc/calmodule.cfg \
-    $(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hal.conf
+    $(LOCAL_PATH)/sensors/hals.conf:system/etc/sensors/hals.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \
