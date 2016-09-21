@@ -46,5 +46,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.min.duration.secs=30 \
     audio.offload.pcm.16bit.enable=false \
     audio.offload.pcm.24bit.enable=false \
+    audio.offload.video=true \
     av.streaming.offload.enable=true \
     use.voice.path.for.pcm.voip=true
