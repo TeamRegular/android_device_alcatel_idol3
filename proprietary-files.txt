@@ -624,6 +624,7 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 
 # NFC
+vendor/firmware/BCM20795A1_001.002.012.0003.0110_Generic_I2C_NCD_Unsigned_configdata.ncd
 vendor/firmware/BCM20795A2_001.003.025.0005.0050_Generic_I2C_NCD_Unsigned_configdata.ncd
 
 # Perf
