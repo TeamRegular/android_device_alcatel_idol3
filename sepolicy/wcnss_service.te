@@ -1,2 +1,2 @@
-allow wcnss_service wcnss_device:dir search;
-allow wcnss_service macaddr_data_file:file { open read getattr };
+allow wcnss_service tct_persist_file:dir search;
+allow wcnss_service tct_persist_file:file { open read getattr };

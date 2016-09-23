@@ -1,1 +1,2 @@
 allow vold persist_drm_file:file { read open ioctl };
+allow vold tct_persist_file:dir {read open ioctl };
