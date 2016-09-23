@@ -133,8 +133,8 @@ void vendor_load_properties()
         common_properties();
         dualsim_properties("dsds");
         gsm_properties("9");
-        property_set("ro.build.fingerprint", "TCL/6045K/idol3:5.0.2/LRX22G/v7SSA-0:user/release-keys");
-        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSA-0 release-keys");
+        property_set("ro.build.fingerprint", "TCL/6045K/idol3:6.0.1/MMB29M/v7VG6-0:user/release-keys");
+        property_set("ro.build.description", "idol3-user 6.0.1 MMB29M v7VG6-0 release-keys");
         property_set("ro.product.model", "6045K");
     } else if (strstr(curef_version, "6045O")) {
         /* 6045O Cricket */
@@ -149,8 +149,8 @@ void vendor_load_properties()
         common_properties();
         dualsim_properties("single");
         gsm_properties("9");
-        property_set("ro.build.fingerprint", "TCL/6045Y/idol3:5.0.2/LRX22G/v7SSV-0:user/release-keys");
-        property_set("ro.build.description", "idol3-user 5.0.2 LRX22G v7SSV-0 release-keys");
+        property_set("ro.build.fingerprint", "TCL/6045Y/idol3:6.0.1/MMB29M/v7VG6-0:user/release-keys");
+        property_set("ro.build.description", "idol3-user 6.0.1 MMB29M v7VG6-0 release-keys");
         property_set("ro.product.model", "6045Y");
     } else {
         /* I806 */
