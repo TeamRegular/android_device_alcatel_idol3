@@ -632,6 +632,7 @@ bin/msm_irqbalance
 bin/power_engine
 vendor/bin/perfd
 vendor/lib64/libqti-perfd-client.so
+vendor/lib/libqti-perfd-client.so
 
 # Peripheral manager
 bin/pm-service
