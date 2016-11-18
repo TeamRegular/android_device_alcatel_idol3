@@ -17,7 +17,4 @@ $(call inherit-product, device/alcatel/idol3/full_idol3.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-# Enhanced NFC
-$(call inherit-product, vendor/cm/config/nfc_enhanced.mk)
-
 PRODUCT_NAME := lineage_idol3
