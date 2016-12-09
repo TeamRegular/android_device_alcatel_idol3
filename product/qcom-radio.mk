@@ -11,6 +11,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     librmnetctl \
+    libshim_ril \
     libxml2
 
 # RIL Properties
