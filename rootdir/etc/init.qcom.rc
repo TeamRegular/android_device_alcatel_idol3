@@ -547,3 +547,7 @@ service set_variant /system/bin/sh /init.tct.variant.sh
     class core
     user root
     oneshot
+
+service qcom-mem /system/bin/sh /system/etc/init.qcom.mem.sh
+    disabled
+    oneshot
