@@ -64,6 +64,7 @@ on fs
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
     restorecon_recursive /tctpersist
+    write /proc/sys/vm/swappiness 100
 
 on post-fs
 
@@ -190,6 +191,26 @@ on post-fs-data
     chown system system /sys/class/virtual-proximity/device/enable
     chown system system /sys/class/virtual-proximity/device/proximity
 
+    # Mark the copy complete flag to not completed
+    write /data/misc/radio/copy_complete 0
+    chown radio radio /data/misc/radio/copy_complete
+    chmod 0660 /data/misc/radio/copy_complete
+
+    # File flags for prebuilt ril db file
+    write /data/misc/radio/prebuilt_db_support 1
+    chown radio radio /data/misc/radio/prebuilt_db_support
+    chmod 0400 /data/misc/radio/prebuilt_db_support
+    write /data/misc/radio/db_check_done 0
+    chown radio radio /data/misc/radio/db_check_done
+    chmod 0660 /data/misc/radio/db_check_done
+
+service perfd /system/vendor/bin/perfd
+    class main
+    user root
+    disabled
+    socket perfd seqpacket 0666 root system
+    writepid /dev/cpuset/system-background/tasks
+
     mkdir /data/tombstones 0771 system system
     mkdir /tombstones/modem 0771 system system
     mkdir /tombstones/lpass 0771 system system
@@ -246,6 +267,7 @@ on boot
 
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
+    mkdir /persist/alarm 0770 system system
 
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -297,11 +319,6 @@ on boot
     # Allow access for CCID command/response timeout configuration
     chown system system /sys/module/ccid_bridge/parameters/bulk_msg_timeout
 
-    # Mark the copy complete flag to not completed
-    write /data/misc/radio/copy_complete 0
-    chown radio radio /data/misc/radio/copy_complete
-    chmod 0660 /data/misc/radio/copy_complete
-
     # Touchpanel
     chown root system /sys/class/tp_gesture/tp_device/tp_gesture_id
     chmod 0664 /sys/class/tp_gesture/tp_device/tp_gesture_id
@@ -336,12 +353,13 @@ on property:vold.decrypt=trigger_restart_framework
     start config_bluetooth
 
 service cnd /system/bin/cnd
-    class late_start
+    class main
     socket cnd stream 660 root inet
 
 service dpmd /system/bin/dpmd
     class late_start
     socket dpmd stream 660 root system
+    group system readproc
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
@@ -351,11 +369,6 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
-
-service rfs_access /system/bin/rfs_access
-   class core
-   user root
-   group system net_raw
 
 service tftp_server /system/bin/tftp_server
    class main
@@ -513,7 +526,7 @@ service ril-daemon1 /system/bin/rild -c 2
 
 service charger /charger
     class charger
-    group log
+    group log system graphics
     seclabel u:r:healthd:s0
 
 service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
@@ -533,13 +546,6 @@ service qseecomd /system/bin/qseecomd
    class core
    user root
    group root
-
-service perfd /system/vendor/bin/perfd
-    class main
-    user root
-    group root
-    disabled
-    writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
@@ -581,7 +587,7 @@ on property:init.svc.surfaceflinger=running
 service per_mgr /system/bin/pm-service
     class core
     user system
-    group system net_raw
+    group system
 
 service power_engine /system/bin/power_engine
     class late_start
