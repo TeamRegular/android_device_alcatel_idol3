@@ -17,9 +17,7 @@ etc/tfa9897/LC/seltech_top.cnt
 etc/tfa9897/seltech_bottom.cnt
 etc/tfa9897/seltech_stereo.cnt
 etc/tfa9897/seltech_top.cnt
-lib64/hw/audio.primary.msm8916.so
 lib64/libtfa9897.so
-lib/hw/audio.primary.msm8916.so
 lib/libtfa9897.so
 
 # Camera
