@@ -179,7 +179,7 @@ vendor/lib/libsmemlog.so
 
 # Radio
 -app/shutdownlistener/shutdownlistener.apk
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|49cfc9721acd3796c649eab52da9db71d91327f9
 bin/netmgrd
 bin/qmuxd
 bin/radish
