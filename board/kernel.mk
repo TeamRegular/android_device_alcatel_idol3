@@ -13,4 +13,4 @@ TARGET_KERNEL_SOURCE := kernel/alcatel/msm8916
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_idol3_defconfig
+TARGET_KERNEL_CONFIG := lineageos_idol3_defconfig
