@@ -9,7 +9,7 @@
 /dev/bcm2079x							u:object_r:nfc_device:s0
 
 
-/tctpersist(/.*)?						u:object_r:tct_persist_file:s0
+/tctpersist(/.*)?						u:object_r:persist_file:s0
 
 /dev/block/bootdevice/by-name/tunning				u:object_r:modem_efs_partition_device:s0
 /dev/block/bootdevice/by-name/traceability			u:object_r:traceability_device:s0

@@ -1,2 +1,0 @@
-allow wcnss_service tct_persist_file:dir search;
-allow wcnss_service tct_persist_file:file { open read getattr };
