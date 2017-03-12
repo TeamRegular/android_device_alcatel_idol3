@@ -1,10 +1,4 @@
-/persist/.bt_nv.bin						u:object_r:bluetooth_data_file:s0
-
-/system/etc/init\.qcom\.bt\.sh					u:object_r:bluetooth_loader_exec:s0
-
 /system/bin/power_engine					u:object_r:power_engine_exec:s0
-
-/dev/smd3							u:object_r:hci_attach_dev:s0
 
 /data/cam_socket.*						u:object_r:camera_socket:s0
 
