@@ -1,4 +1,4 @@
-/system/bin/power_engine					u:object_r:power_engine_exec:s0
+/system/bin/power_engine					u:object_r:thermal-engine_exec:s0
 
 /data/cam_socket.*						u:object_r:camera_socket:s0
 
