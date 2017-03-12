@@ -44,18 +44,18 @@ vendor/lib64/hw/gatekeeper.msm8916.so
 bin/garden_app
 bin/gpsone_daemon
 bin/lowi-server
-lib64/libloc_api_v02.so
-lib/libloc_api_v02.so
+lib64/libloc_api_v02.so|5ed3d95aedcc908e830a1ce948881e4a3d3741cc
+lib/libloc_api_v02.so|2498ed99d78a4bcf94aee4fd3ee9e460cb4f331e
 vendor/lib64/hw/flp.default.so
 vendor/lib64/libflp.so
 vendor/lib64/libgeofence.so
 vendor/lib64/libizat_core.so
-vendor/lib64/liblbs_core.so
+vendor/lib64/liblbs_core.so|47591c27a6795891aa6b775b48d5ad19e7a71589
 vendor/lib/hw/flp.default.so
 vendor/lib/libflp.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
+vendor/lib/liblbs_core.so|06630679f05b1480bddcce0a6bea44e112ef328e
 
 # Graphics
 vendor/lib64/egl/eglsubAndroid.so|b8314d91b88b317c41d36137c3afa12bf88676e6
